@@ -14,9 +14,8 @@ int main() {
         return 0;
     }
 
-    int first[m][n], second[p][q], result[m][q];
+    int first[m][n], second[p][q], result[m][q];  
 
-    // Input first matrix
     printf("Enter elements of matrix 1:\n");
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
@@ -24,7 +23,7 @@ int main() {
         }
     }
 
-    // Input second matrix
+    
     printf("Enter elements of matrix 2:\n");
     for (int i = 0; i < p; i++) {
         for (int j = 0; j < q; j++) {
@@ -32,15 +31,14 @@ int main() {
         }
     }
 
-    // Initialize the result matrix to 0
+ 
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < q; j++) {
             result[i][j] = 0;
         }
     }
 
-    // Multiply matrices
-    for (int i = 0; i < m; i++) {
+   for (int i = 0; i < m; i++) {
         for (int j = 0; j < q; j++) {
             for (int k = 0; k < n; k++) {
                 result[i][j] += first[i][k] * second[k][j];
@@ -48,7 +46,7 @@ int main() {
         }
     }
 
-    // Print the result matrix
+   
     printf("Product of the matrices:\n");
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < q; j++) {
@@ -57,4 +55,5 @@ int main() {
         printf("\n");
     }
 
-    ret
+    return 0;
+}
